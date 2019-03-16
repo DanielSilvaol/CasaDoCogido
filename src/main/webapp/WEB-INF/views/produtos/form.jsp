@@ -11,7 +11,7 @@
     <title>Livros de Java, Android, iPhone, Ruby, PHP e muito mais - Casa do Código</title>
 </head>
 <body>
-<form action="/produtos" method="post">
+<form action="/casadocodigo_war_exploded/produtos" method="post">
     <div>
         <label>Titulo</label>
         <input type="text" name="titulo">
