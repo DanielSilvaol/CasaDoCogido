@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: DanielSilvaol
@@ -18,12 +19,20 @@
     </div>
     <div>
         <label>Descrição</label>
-        <textarea name="descricao"  cols="30" rows="10"></textarea>
+        <textarea name="descricao" cols="30" rows="10"></textarea>
     </div>
     <div>
         <label>Paginas</label>
         <input type="text" name="paginas">
     </div>
+    <c:forEach items="${tipos}" var="tipoPreco" varStatus="status">
+        <div>
+            <label>${tipoPreco}</label>
+            <input type="text" name="precos[${status.index}].valor">
+            <input type="hidden" name="precos[${status.index}].tipo" value="${tipoPreco}">
+        </div>
+    </c:forEach>
+
     <button type="submit">Cadastrar</button>
 </form>
 </body>
